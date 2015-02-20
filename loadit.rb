@@ -4,7 +4,7 @@ require 'csv'
 
 dir = File.expand_path(File.dirname(__FILE__))
 db_filename = File.join(dir, 'hockey.sqlite3')
-File.delete db_filename
+File.delete(db_filename) if File.exists?(db_filename)
 
 db = SQLite3::Database.new db_filename
 
