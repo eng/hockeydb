@@ -3,7 +3,7 @@ require 'sqlite3'
 require 'csv'
 
 dir = File.expand_path(File.dirname(__FILE__))
-db_filename = File.join(dir, 'test.db')
+db_filename = File.join(dir, 'hockey.sqlite3')
 File.delete db_filename
 
 db = SQLite3::Database.new db_filename
