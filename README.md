@@ -1,4 +1,4 @@
-!!! Hockey DB in Ruby
+# Hockey DB in Ruby
 
 ```
 bundle install
