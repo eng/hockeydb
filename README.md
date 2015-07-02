@@ -3,7 +3,7 @@
 ```
 bundle install
 ruby loadit.rb
-sqlite3 hockeydb.sqlite3
+sqlite3 hockey.sqlite3
 ```
 
 Then, go nuts:
