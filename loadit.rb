@@ -160,6 +160,9 @@ team_file.each do |row|
   end
 
   # Rk,Player,From,To,Yrs,Pos,GP,G,A,PTS,+/-,PIM,EV,PP,SH,GW,EV,PP,SH,S,S%,TOI,ATOI
+  # (team_id, name, from_year, to_year, position,
+  #    games_played, goals, assists, points, plus_minus, 
+  #    penalty_minutes, game_winning_goals)
   puts "- Players"
   players_file = CSV.read(File.join(dir, 'data', "teams_#{code}_skaters_skaters.csv"))
   players_file.shift(2)
@@ -169,14 +172,14 @@ team_file.each do |row|
                                 row[1],
                                 row[2],
                                 row[3],
-                                row[4],
                                 row[5],
                                 row[6],
                                 row[7],
                                 row[8],
                                 row[9],
                                 row[10],
-                                row[14]
+                                row[11],
+                                row[15]
     end
   end
 end
