@@ -141,6 +141,7 @@ team_file.each do |row|
                           row[14],
                           row[16]
   team_id = db.last_insert_row_id
+  team_name = row.first
 
   # Season,Lg,Team,GP,W,L,T,OL,PTS,PTS%,SRS,SOS,Finish,Playoffs,Coaches
   puts "- Seasons"
@@ -149,7 +150,7 @@ team_file.each do |row|
   season_file.each do |row|
     db.execute season_insert, team_id, 
                               row[0],
-                              row[2],
+                              team_name,
                               row[3],
                               row[4],
                               row[5],
